@@ -1,0 +1,22 @@
+#!/bin/bash
+
+###Fedora Workstation###
+##Atualização completa do sistema##
+sudo dnf upgrade --refresh -y; sudo dnf autoremove -y; flatpak update -y;
+
+##Instalação dos programas nativos do Fedora em instalação completa##
+#sudo dnf install gnome-tweaks -y; sudo dnf install idle3 -y; sudo dnf install lshw-gui -y; sudo dnf install qbittorrent -y; sudo dnf install mypaint -y; sudo dnf install thunderbird -y; sudo dnf install rstudio-desktop -y; sudo dnf install elementary-code -y; sudo dnf install google-chrome -y;
+
+##Instalação dos programas nativos do Fedora em instalação mínima##
+#sudo dnf install gnome-tweaks -y; sudo dnf install idle3 -y; sudo dnf install lshw-gui -y; sudo dnf install qbittorrent -y; sudo dnf install mypaint -y; sudo dnf install thunderbird -y; sudo dnf install rstudio-desktop -y; sudo dnf install elementary-code -y; sudo dnf install mediawriter -y; sudo yum install wget -y; wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm; sudo yum localinstall google-chrome-stable_current_x86_64.rpm -y;
+
+##Instalação dos programas Flatpack - Fedora Workstation##
+#flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo; flatpak install flathub com.spotify.Client -y; flatpak install flathub org.videolan.VLC -y; flatpak install flathub com.valvesoftware.Steam -y; flatpak install flathub us.zoom.Zoom -y; flatpak install flathub org.kde.kdenlive -y; flatpak install flathub org.onlyoffice.desktopeditors -y; flatpak install flathub com.skype.Client -y; flatpak install flathub com.adobe.Flash-Player-Projector -y; flatpak install flathub com.slack.Slack -y; flatpak install flathub org.gnome.Extensions -y;
+
+sudo reboot
+
+##Upgrade de versão##
+###Atualizar por completo o sistema antes desse processo###
+####Verificar a versão nova no "releasever="####
+
+#sudo dnf install dnf-plugin-system-upgrade; sudo dnf system-upgrade download --releasever=36; sudo dnf system-upgrade reboot
